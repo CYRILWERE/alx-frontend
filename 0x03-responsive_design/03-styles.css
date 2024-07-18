@@ -1,0 +1,104 @@
+/* Variables */
+:root {
+  --section-padding: 5rem 1.5rem;
+  --section-body-padding: 2rem 0 0;
+}
+
+/* Helpers */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Section About Us */
+.section-about-us {
+  padding: var(--section-padding);
+  text-align: center;
+}
+
+/* Section Latest News */
+.section-latest-news {
+  padding: var(--section-padding);
+}
+.section-latest-news .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.section-latest-news .col-1-3 {
+  flex: 1 1 calc(33.333% - 2rem);
+}
+.section-latest-news .col-1-2 {
+  flex: 1 1 calc(50% - 2rem);
+}
+
+/* Grid */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+.col-1-3,
+.col-1-2 {
+  padding: 0 15px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+}
+.navbar-menu {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Media Queries */
+/* For tablet / medium styles (max-width: 767px) */
+@media (max-width: 767px) {
+  /* Helpers */
+  main img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Section Latest News */
+  .section-latest-news .row {
+    flex-direction: column;
+  }
+  
+  /* Grid */
+  :root {
+    --section-padding: 5rem 1.5rem;
+    --section-body-padding: 2rem 0 0;
+  }
+  ul.row, .row {
+    flex-direction: column;
+    margin: 0;
+  }
+  [class*="col-"] {
+    margin: 0 0 3rem 0;
+  }
+  .col-1-3, .col-1-2 {
+    width: 100%;
+  }
+  
+  /* Navbar */
+  .navbar-menu {
+    display: none;
+  }
+}
+
+/* For mobile styles (max-width: 480px) */
+@media (max-width: 480px) {
+  /* Further mobile-specific adjustments can be added here if needed */
+}
+
